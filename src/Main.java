@@ -48,7 +48,7 @@ public class Main {
         }
         System.out.println("The number " + userNum + " appeared in the list of values " + checker + " times.\n");
 
-        checker = -2;
+        checker = -1;
 
         userNum = InputHelper.getRangedInt(scan, "Please input another integer within the following range", 1, 100);
         for (int i = 0; i<valuesArray.length; i++) {
@@ -59,7 +59,7 @@ public class Main {
         }
 
         if (checker == -1) {
-            System.out.println("The number " + userNum + " does not appear in the list of valuees.");
+            System.out.println("The number " + userNum + " does not appear in the list of values.");
         } else {
             System.out.println("The value Value " + (checker+1) + " appears in the array at index " + checker + ".");
         }
