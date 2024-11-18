@@ -12,7 +12,7 @@ public class InputHelper {
                 num = scan.nextInt();
                 done = true;
             } else {
-                System.out.println("Invalid num - " + prompt.toLowerCase());
+                System.out.println("Invalid num." + prompt);
             }
             scan.nextLine();
         } while (!done);
@@ -29,7 +29,7 @@ public class InputHelper {
                 num = scan.nextDouble();
                 done = true;
             } else {
-                System.out.println("Invalid num - " + prompt.toLowerCase());
+                System.out.println("Invalid num." + prompt);
             }
             scan.nextLine();
         } while (!done);
@@ -48,10 +48,10 @@ public class InputHelper {
                 if (num > 0) {
                     done = true;
                 } else {
-                    System.out.println("Invalid num - please enter in a positive nonzero integer value.");
+                    System.out.println("Invalid num." + prompt);
                 }
             } else {
-                System.out.println("Invalid num - please enter in a positive nonzero integer value.");
+                System.out.println("Invalid num." + prompt);
             }
             scan.nextLine();
         } while (!done);
@@ -62,17 +62,17 @@ public class InputHelper {
         int num = 0;
         boolean done = false;
 
-        System.out.println(prompt + " [" + lowerBound + "-" + upperBound + "]");
+        System.out.println("Invalid num." + prompt + " [" + lowerBound + "-" + upperBound + "]");
         do {
             if (scan.hasNextInt()) {
                 num = scan.nextInt();
                 if (num <= upperBound && num >= lowerBound) {
                     done = true;
                 } else {
-                    System.out.println("Invalid num - " + prompt.toLowerCase() + " [" + lowerBound + "-" + upperBound + "]");
+                    System.out.println("Invalid num." + prompt + " [" + lowerBound + "-" + upperBound + "]");
                 }
             } else {
-                System.out.println("Invalid num - " + prompt.toLowerCase() + " [" + lowerBound + "-" + upperBound + "]");
+                System.out.println("Invalid num." + prompt + " [" + lowerBound + "-" + upperBound + "]");
             }
             scan.nextLine();
         } while (!done);
@@ -91,11 +91,11 @@ public class InputHelper {
                     scan.nextLine();
                     done = true;
                 } else {
-                    System.out.println("Invalid num - " + prompt.toLowerCase() + lowerBound + "-" + upperBound + ".");
+                    System.out.println("Invalid num." + prompt + " [" + lowerBound + "-" + upperBound + "]");
                     scan.nextLine();
                 }
             } else {
-                System.out.println("Invalid num - " + prompt.toLowerCase() + lowerBound + "-" + upperBound + ".");
+                System.out.println("Invalid num." + prompt + " [" + lowerBound + "-" + upperBound + "]");
                 scan.nextLine();
             }
         } while (!done);
@@ -114,7 +114,7 @@ public class InputHelper {
             if (input.matches(regExPattern)) {
                 done = true;
             } else {
-                System.out.println("Invalid input - " + prompt.toLowerCase() + ".");
+                System.out.println("Invalid input. " + prompt);
             }
         } while (!done);
         return input;
@@ -130,7 +130,7 @@ public class InputHelper {
         do {
             input = scan.nextLine();
             if (input.length() <= 0) {
-                System.out.println("Invalid input. " + prompt + ".");
+                System.out.println("Invalid input. " + prompt);
             } else {
                 done = true;
 
@@ -158,6 +158,8 @@ public class InputHelper {
                     done = true;
                 }
 
+            } else {
+                System.out.println("Invalid input. " + prompt);
             }
         } while (!done);
         return confirm;
