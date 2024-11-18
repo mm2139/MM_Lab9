@@ -12,7 +12,7 @@ public class InputHelper {
                 num = scan.nextInt();
                 done = true;
             } else {
-                System.out.println("Invalid num." + prompt);
+                System.out.println("Invalid num. " + prompt);
             }
             scan.nextLine();
         } while (!done);
@@ -29,7 +29,7 @@ public class InputHelper {
                 num = scan.nextDouble();
                 done = true;
             } else {
-                System.out.println("Invalid num." + prompt);
+                System.out.println("Invalid num. " + prompt);
             }
             scan.nextLine();
         } while (!done);
@@ -48,10 +48,10 @@ public class InputHelper {
                 if (num > 0) {
                     done = true;
                 } else {
-                    System.out.println("Invalid num." + prompt);
+                    System.out.println("Invalid num. " + prompt);
                 }
             } else {
-                System.out.println("Invalid num." + prompt);
+                System.out.println("Invalid num. " + prompt);
             }
             scan.nextLine();
         } while (!done);
@@ -69,10 +69,10 @@ public class InputHelper {
                 if (num <= upperBound && num >= lowerBound) {
                     done = true;
                 } else {
-                    System.out.println("Invalid num." + prompt + " [" + lowerBound + "-" + upperBound + "]");
+                    System.out.println("Invalid num. " + prompt + " [" + lowerBound + "-" + upperBound + "]");
                 }
             } else {
-                System.out.println("Invalid num." + prompt + " [" + lowerBound + "-" + upperBound + "]");
+                System.out.println("Invalid num. " + prompt + " [" + lowerBound + "-" + upperBound + "]");
             }
             scan.nextLine();
         } while (!done);
@@ -91,11 +91,11 @@ public class InputHelper {
                     scan.nextLine();
                     done = true;
                 } else {
-                    System.out.println("Invalid num." + prompt + " [" + lowerBound + "-" + upperBound + "]");
+                    System.out.println("Invalid num. " + prompt + " [" + lowerBound + "-" + upperBound + "]");
                     scan.nextLine();
                 }
             } else {
-                System.out.println("Invalid num." + prompt + " [" + lowerBound + "-" + upperBound + "]");
+                System.out.println("Invalid num. " + prompt + " [" + lowerBound + "-" + upperBound + "]");
                 scan.nextLine();
             }
         } while (!done);
